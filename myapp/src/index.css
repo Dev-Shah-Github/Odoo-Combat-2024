@@ -1,0 +1,793 @@
+/* || JAY SHREE MATAJI || || JAY SHREE GANESH || || JAY SHREE GAUMATA ||
+|| JAY SHREE RAM || || JAY SHREE KRISHNA ||
+|| JAY SHREE KHETARPAL DADA || || JAY SHREE KSHETRAPAL DADA || */
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root{}
+
+#root{
+  width: 100vw;
+  height: 100dvh;
+  background-color: #f7a1b4;
+  display: flex;
+  flex-direction: column;
+}
+
+header{
+  padding: 10px;
+  background-color: #fa4169;
+  width: 100%;
+  height: 60px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+  color: white;
+}
+header > .logo{
+  width: fit-content;
+  background-color: transparent;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 10px;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+header > .links,
+header > .profile{
+  width: fit-content;
+  height: 100%;
+  background-color: transparent;
+  flex-grow: 1;
+  display: flex;
+  justify-content: start;
+  font-size: 1.2em;
+  text-transform: capitalize;
+}
+header > .profile{
+  justify-content: flex-end;
+}
+header > .links > ul,
+header > .profile > ul{
+  width: fit-content;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  gap: 10px;
+  padding: 0px 10px;
+  padding-left: 40px;
+}
+header > .profile > ul{
+  padding-left: 10px;
+  padding-right: 40px;
+}
+header > .links > ul > li{
+  text-decoration: none;
+}
+
+
+.mainContainer{
+  width: calc(100%);
+  height: calc(100% - 60px);
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+}
+.mainContainer > .componentContainer{
+  width: calc(100% - 0px);
+  height: 100%;
+  background-color: rgba(212, 212, 212, 0.148);
+  display: flex;
+  flex-direction: row;
+  padding: 10px 20px;
+  overflow: auto;
+  gap: 10px;
+}
+.mainContainer > div > div:nth-child(1){
+  width: calc(100% - 250px) !important;
+  padding: 10px 0px;
+  height: fit-content;
+}
+.mainContainer > div > div:nth-child(2){
+  width: 250px !important;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px rgba(211, 211, 211, 0.146);
+}
+.mainContainer > div{
+  width: 100%;
+  background-color: #fe3964;
+}
+
+.buttons{
+  width: 100%;
+  height: fit-content;
+  margin-bottom: 10px;
+  display: flex;
+  flex-flow: wrap row;
+  gap: 10px;
+}
+.buttons > button{
+  width: fit-content;
+  height: 40px;
+  padding: 0px 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: #ff00378b;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  flex-direction: row;
+  font-size: 1.1em;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+.buttons > button:hover{
+  background-color: #fa4169;
+}
+.buttons > button:hover > i{
+  color: #fa4169;
+}
+.buttons > button > i{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  color: #ff00378b;
+  border-radius: 10px;
+}
+
+.homeTeamList{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  overflow: visible;
+  overflow-x: scroll;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex: none;
+}
+.homeTeamList > .card{
+  width: 250px;
+  height: fit-content;
+  background-color: #fe1e4e12;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  position: relative;
+}
+.homeTeamList > .card > div:nth-child(1){
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  border-radius: 10px;
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+.homeTeamList > .card > div:nth-child(2){
+  width: calc(100% - 60px);
+  height: 60px;
+  background-color: transparent;
+}
+.homeTeamList > .card > div:nth-child(2) > label{
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+}
+.homeTeamList > .card > div:nth-child(2) > label:nth-child(1){
+  font-weight: bolder;
+  font-size: 1.3em;
+}
+.homeTeamList > .card > div:nth-child(2) > label:nth-child(2){
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.head-label{
+  width: 100%;
+  height: fit-content;
+  padding: 10px 0px;
+  font-weight: bolder;
+  display: flex;
+  flex-direction: row;
+  background-color: transparent;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.head-label > i{
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fe1e4e50;
+  border-radius: 10px;
+}
+
+.homeTaskList{
+  width: 100%;
+  height: fit-content;
+  flex-grow: 1;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 15px;
+}
+.homeTaskList > .card{
+  width: calc(100% / 3.1);
+  height: fit-content;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 20px;
+  gap: 10px;
+  box-shadow: 1px 1px 10px #d3d3d34c;
+  position: relative;
+  overflow: visible;
+}
+.more{
+  background-color: white;
+  display: flex;
+  width: 10px;
+  height: 30px;
+  position: absolute;
+  right: 8px;
+  top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  cursor: pointer;
+  z-index: 12;
+}
+.more > span{
+  width: 5px;
+  height: 5px;
+  background-color: #fa416970;
+  border-radius: 100px;
+}
+.more:hover > span{
+  background-color: #fa4169;
+}
+.homeTeamList > .card > span{
+  background-color: transparent;
+}
+.popup-disp{
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  z-index: 12;
+  right: 8px;
+  top: 10px;
+  background-color: #fa4169;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  display: none;
+}
+.popup-disp > span{
+  width: 100%;
+  padding: 5px;
+  color: white;
+  background-color: #b10026;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 5px 10px;
+}
+.popup-disp > span:nth-child(1){
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.homeTaskList > .card > div:nth-child(1){
+  width: 100%;
+  height: fit-content;
+  padding: 0px 0px;
+  font-weight: bold;
+  text-transform: capitalize;
+  padding-top: 5px;
+  font-size: 1.3em;
+}
+.homeTaskList > .card > div:nth-child(2){
+  font-weight: 500;
+  text-transform: capitalize;
+  width: 100%;
+  height: fit-content;
+}
+.homeTaskList > .card > div:nth-child(2) > label{
+  width: 100%;
+  height: fit-content;
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  background-color: transparent;
+}
+.homeTaskList > .card > div:nth-child(3){
+  width: 100%;
+  height: fit-content;
+  padding: 0px 0px;
+  font-weight: bold;
+  text-transform: capitalize;
+  padding-top: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+.homeTaskList > .card > div:nth-child(3) > label{
+  width: 100%;
+  height: fit-content;
+  padding: 5px 0px;
+}
+.homeTaskList > .card > div:nth-child(3) > div{
+  width: 100%;
+  height: fit-content;
+  overflow: auto;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.homeTaskList > .card > div:nth-child(3) > div > label{
+  width: fit-content;
+  background-color: #d3d3d34c;
+  padding: 5px;
+  border-radius: 6px;
+}
+.homeTaskList > .card > div:nth-child(4){
+  width: 100%;
+  height: fit-content;
+  padding: 0px 0px;
+  font-weight: bold;
+  text-transform: capitalize;
+  padding-top: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.homeTaskList > .card > div:nth-child(4) > label{
+  width: 100%;
+  height: fit-content;
+  padding: 0px 0px;
+}
+
+.componentContainerMember{
+  width: 100%;
+  display: flex;
+  flex-direction: column !important;
+  gap: 10px;
+}
+.componentContainerMember > form{
+  width: 100%;
+  height: fit-content;
+  background-color: #fa4169;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+  position: relative;
+}
+.componentContainerMember > div{
+  width: 300px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.componentContainerMember > form > .header{
+  width: 100%;
+  font-weight: bold;
+  font-size: 1.3em;
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  padding: 10px 0px;
+}
+.componentContainerMember > form > .header > i{
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+}
+.componentContainerMember > form > div{
+  width: 100%;
+}
+.componentContainerMember > form > button,
+.componentContainerMember > form > div > input{
+  width: 200px;
+  height: 30px;
+}
+
+.Members{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow: auto;
+}
+.Members > .header{
+ width: 100%;
+ background-color: #fa4169;
+ box-shadow: -0px -40px 1px 10px white;
+ border-radius: 10px;
+ padding: 10px;
+ display: flex;
+ flex-direction: column;
+ gap: 10px;
+ position: sticky;
+ top: 0px;
+ color: white;
+}
+.Members > .header > label{
+  font-size: 1.3em;
+  text-transform: capitalize;
+  font-weight: bold;
+  width: 100%;
+  height: fit-content;
+  padding-left: 10px;
+  display: flex;
+}
+.Members > .header > div{
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+}
+.Members > .header > div > label{
+  display: flex;
+  flex-grow: 1;
+  text-transform: capitalize;
+  align-items: center;
+  justify-content: start;
+  padding: 0px 0px;
+}
+.Members > .header > div > i{
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  background-color: #fa4169;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.Members > .card{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(210, 239, 255, 0.311);
+  gap: 10px;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+.Members > .card:nth-child(odd){
+  background-color: rgba(210, 213, 255, 0.311);
+}
+.Members > .card > div:nth-child(1){
+  width: 30px;
+  height: 30px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Members > .card > div:nth-child(2){
+  width: fit-content;
+  flex-grow: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  font-size: 1.3em;
+}
+
+.createTeamPOPUP,
+.createTaskPOPUP{
+  position: absolute;
+  z-index: 40;
+  width: 100%;
+  height: calc(100% - 60px);
+  background-color: rgba(244, 244, 244, 0.719) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  display: none;
+}
+.createTeamPOPUP > form,
+.loginDiv > form,
+.createTaskPOPUP > form{
+  width: 250px;
+  height: fit-content;
+  background-color: white;
+  box-shadow: 1px 1px 10px lightgray;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  border-radius: 10px;
+  padding: 20px;
+  gap: 10px;
+  position: relative;
+} 
+.createTeamPOPUP > form > .popup-disp,
+.loginDiv > form > .popup-disp,
+.createTaskPOPUP > form > .popup-disp{
+  display: flex;
+  color: white;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.createTeamPOPUP > form > .header,
+.loginDiv > form > .header,
+.createTaskPOPUP > form > .header{
+  width: 100%;
+  height: fit-content;
+  font-size: 1.3em;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.createTeamPOPUP > form > div,
+.loginDiv > form > div,
+.createTaskPOPUP > form > div{
+  width: 100%;
+  height: fit-content;
+  position: relative;
+  background-color: transparent;
+  padding: 10px 0px;
+}
+.createTeamPOPUP > form > div > label,
+.loginDiv > form > div > label,
+.createTaskPOPUP > form > div > label{
+  position: absolute;
+  z-index: 10;
+  top: -0px;
+  left: 10px;
+  background-color: white;
+  padding: 3px 10px;
+  background-color: white;
+  text-transform: capitalize;
+}
+.createTeamPOPUP > form > div > input,
+.createTeamPOPUP > form > div > textarea,
+.loginDiv > form > div > input,
+.loginDiv > form > div > textarea,
+.createTaskPOPUP > form > div > input,
+.createTaskPOPUP > form > div > textarea,
+.createTaskPOPUP > form > div > select{
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  border: 1.5px solid;
+  border-color: #fa416930;
+  border-radius: 5px;
+  outline: none;
+}
+.createTeamPOPUP > form > div > input:focus,
+.createTeamPOPUP > form > div > textarea:focus,
+.loginDiv > form > div > input:focus,
+.loginDiv > form > div > textarea:focus,
+.createTaskPOPUP > form > div > input:focus,
+.createTaskPOPUP > form > div > textarea:focus,
+.createTaskPOPUP > form > div > select:focus{
+  border-color: #fa4169;
+}
+.createTeamPOPUP > form > div > textarea,
+.loginDiv > form > div > textarea,
+.createTaskPOPUP > form > div > textarea{
+  height: 80px;
+}
+.createTeamPOPUP > form > button,
+.loginDiv > form > button,
+.createTaskPOPUP > form > button{
+  width: 100%;
+  height: 40px;
+  flex: none;
+  background-color: #fa416930;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 1.1em;
+  text-transform: capitalize;
+}
+.createTeamPOPUP > form > button:hover,
+.loginDiv > form > button:hover,
+.createTaskPOPUP > form > button:hover{
+  background-color: #fa4169;
+  color: white;
+}
+
+.loginDiv{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #3d3d3d4c !important;
+  padding: 30px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.loginDiv > div{
+  width: 300px;
+  height: 90%;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.788);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.loginDiv > div > img{
+  width: 70%;
+}
+.loginDiv > form{
+  box-shadow: none;
+  height: 90%;
+  border-radius: 0px 10px 10px 0px;
+}
+
+.createTaskPOPUP{
+  width: fit-content;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  background-color: white; 
+}
+.createTaskPOPUP > form{
+  display: flex;
+  flex-flow: wrap row !important;
+  height: fit-content;
+  box-shadow: none;
+  border-radius: 0px;
+  align-items: start;
+  justify-content: start;
+}
+.createTaskPOPUP > form > .shortWidth{
+  width: calc(50% - 6px) !important;
+}
+.createTaskPOPUP > form:nth-child(2),
+.createTaskPOPUP > form:nth-child(3){
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  border-radius: 0px;
+  border-left: 1px solid #fa416979;
+}
+.createTaskPOPUP > form:nth-child(1){
+  border-radius: 10px 0px 0px 10px;
+}
+.createTaskPOPUP > form:nth-child(2) > div{
+  display: flex;
+  height: 270px;
+  background-color: transparent;
+}
+.createTaskPOPUP > form:nth-child(2) > div > textarea{
+  height: calc(100%);
+  margin: 0 !important;
+}
+.createTaskPOPUP > form:nth-child(3){
+  border-radius: 0px 10px 10px 0px;
+}
+.createTaskPOPUP > form > .uploadedData{
+  width: 100%;
+  height: 100px;
+  display: flex;
+  border: 1px solid #fa416930;
+  height: 250px;
+  padding: 10px;
+  border: 1.5px solid #fa416940;
+  border-radius: 6px;
+  overflow: auto;
+  flex-direction: column;
+  gap: 10px;
+}
+.createTaskPOPUP > form > .uploadedData > label{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  margin: 0px;
+  gap: 10px;
+  position: static !important;
+  background-color:#fbe7ebc1;
+  padding: 10px;
+  border-radius: 6px;
+}
+.createTaskPOPUP > form > .uploadedData > label:nth-child(odd){
+  background-color:#fcd1da;
+}
+.createTaskPOPUP > form > .uploadedData > label > i{
+  width: 20px;
+  height: 20px;
+  background-color: #fa4169;
+  color: white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+::-webkit-scrollbar{
+  display: none;
+}
